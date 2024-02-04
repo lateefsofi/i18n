@@ -16,6 +16,10 @@
       {
         "command": "i18n.sortLines",
         "title": "Sort Lines"
+      },
+      {
+        "command": "i18n.importMissingLabels",
+        "title": "Import Missing Labels"
       }
     ]
   },
