@@ -1,8 +1,9 @@
 {
-  "name": "i18n",
-  "displayName": "i18n",
+  "name": "i18nmaster",
+  "displayName": "I18nMaster",
   "description": "Sort lines and find diff",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "LateefSofi",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -32,7 +33,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.86.0",
+    "@types/vscode": "^1.74.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
@@ -41,5 +42,9 @@
     "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.4",
     "@vscode/test-electron": "^2.3.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lateefsofi/i18n.git"
+  }  
 }
