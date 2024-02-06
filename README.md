@@ -29,6 +29,17 @@ This feature enables you to import missing i18n labels from a selected file into
 3. Search "Import Missing Labels" and hit enter
 4. Select the i18n file containing missing labels.
 
+### 3. Import Missing i18n Labels and exclude labels matching pattern
+
+This feature enables you to import missing i18n labels from a selected file into the currently opened i18n file in the editor but ignore those labels matching the pattern. It updates existing labels, associates comments, and adds missing labels excluding labels matching the pattern. Pattern can be specified in the settings for "excludePattern" parameter, its default value is "COMMON_". 
+
+#### How to Use:
+
+1. Open the i18n file in the editor where you want to import labels.
+2. Invoke the import command through the VSCode command palette.
+3. Search "Import Missing Labels" and hit enter
+4. Select the i18n file containing missing labels.
+
 ## Installation
 
 1. Install the extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=LateefSofi.i18nmaster).
