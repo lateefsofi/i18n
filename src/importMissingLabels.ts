@@ -38,7 +38,7 @@ function extractLabelsAndComments(content: string) {
     return lines.join('\n');
   }
 
-export function importMissingLabels(currentFile: string, importFile: string) {
+export function importMissingLabels(currentFile: string, importFile: string, isExcludePattern?: boolean, pattern?: RegExp) {
   try {
     const currentContent = fs.readFileSync(currentFile, 'utf-8');
     const importContent = fs.readFileSync(importFile, 'utf-8');
@@ -65,12 +65,23 @@ export function importMissingLabels(currentFile: string, importFile: string) {
     }
 
     // Add missing labels from the import file
-    for (const key of Object.keys(importedLabels)) {
-      if (!currentLabels[key]) {
-        // Missing label from the current file
-        mergedLabels[key] = importedLabels[key];
-        mergedComments[key] = importedComments[key];
-        mergedOrder.push(key);
+    if(isExcludePattern && pattern) {
+      for (const key of Object.keys(importedLabels)) {
+        if (!currentLabels[key] && !pattern.test(key)) {
+          // Missing label from the current file
+          mergedLabels[key] = importedLabels[key];
+          mergedComments[key] = importedComments[key];
+          mergedOrder.push(key);
+        }
+      }
+    }else {
+      for (const key of Object.keys(importedLabels)) {
+        if (!currentLabels[key]) {
+          // Missing label from the current file
+          mergedLabels[key] = importedLabels[key];
+          mergedComments[key] = importedComments[key];
+          mergedOrder.push(key);
+        }
       }
     }
 

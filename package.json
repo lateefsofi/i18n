@@ -1,8 +1,8 @@
 {
   "name": "i18nmaster",
   "displayName": "I18nMaster",
-  "description": "Sort lines and find diff",
-  "version": "1.0.0",
+  "description": "Sort lines and import missing labels into master i18n properties file",
+  "version": "1.1.0",
   "publisher": "LateefSofi",
   "engines": {
     "vscode": "^1.74.0"
@@ -21,8 +21,22 @@
       {
         "command": "i18n.importMissingLabels",
         "title": "Import Missing Labels"
+      },
+      {
+        "command": "i18n.importMissingLabelsAndExcludeMatchingPattern",
+        "title": "Import Missing Labels And Exclude Matching Pattern"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "i18nmaster.excludePattern": {
+          "type": "string",
+          "default": "COMMON_",
+          "description": "Exclude importing labels with this pattern"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
