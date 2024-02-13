@@ -13,10 +13,11 @@ This feature allows you to sort the labels in your i18n file while preserving co
 #### How to Use:
 
 1. Open the i18n file in the editor.
-2. Select file content to sort
+2. Select file content to sort(Example: Ctl + A or Command + A)
 3. Invoke the sorting command through the VSCode command palette.
 4. Search "Sort Lines" and hit enter
 5. Your selected i18n labels should be sorted now
+![](./images/sort.gif)
 
 ### 2. Import Missing i18n Labels
 
@@ -28,6 +29,7 @@ This feature enables you to import missing i18n labels from a selected file into
 2. Invoke the import command through the VSCode command palette.
 3. Search "Import Missing Labels" and hit enter
 4. Select the i18n file containing missing labels.
+![](./images/import-missing-labels.gif)
 
 ### 3. Import Missing i18n Labels and exclude labels matching pattern
 
@@ -35,10 +37,12 @@ This feature enables you to import missing i18n labels from a selected file into
 
 #### How to Use:
 
-1. Open the i18n file in the editor where you want to import labels.
-2. Invoke the import command through the VSCode command palette.
-3. Search "Import Missing Labels" and hit enter
-4. Select the i18n file containing missing labels.
+1. In VScode settings, set the "I18nMaster: Exclude Pattern" (default COMMON_)
+2. Open the i18n file in the editor where you want to import labels.
+3. Invoke the import command through the VSCode command palette.
+4. Search "Import Missing Labels" and hit enter
+5. Select the i18n file containing missing labels.
+![](./images/import-missing-lales-exclude-pattern.gif)
 
 ## Installation
 
