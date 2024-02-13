@@ -17,7 +17,7 @@ This feature allows you to sort the labels in your i18n file while preserving co
 3. Invoke the sorting command through the VSCode command palette.
 4. Search "Sort Lines" and hit enter
 5. Your selected i18n labels should be sorted now
-![](./images/sort.gif)
+![](./images/sort-labels.gif)
 
 ### 2. Import Missing i18n Labels
 
